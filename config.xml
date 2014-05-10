@@ -1,28 +1,38 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.hello-world" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>HelloWorld</name>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.animtypecom.pussy"
+        version   = "1.0">
+
+    <name>Wher is the pussy</name>
+
     <description>
-        Hello World sample application that responds to the deviceready event.
+	Find out where is the pussy
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+
+
+    <author href="http://www.animtype.com" email="dr.animtype@gmail.com">
+        Dr.Animtype
     </author>
-    <feature name="http://api.phonegap.com/1.0/device" />
-    <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
-    <preference name="target-device" value="universal" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
-    <preference name="prerendered-icon" value="true" />
-    <preference name="stay-in-webview" value="false" />
-    <preference name="ios-statusbarstyle" value="black-opaque" />
-    <preference name="detect-data-types" value="true" />
-    <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen" value="true" />
-    <preference name="disable-cursor" value="false" />
-    <preference name="android-minSdkVersion" value="7" />
-    <preference name="android-installLocation" value="auto" />
+
+    <preference name="permissions"                value="none"/>
+
+    <!-- Customize your app and platform with the preference element. -->
+    <preference name="phonegap-version"           value="3.2.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+	<preference name="ios-statusbarstyle"         value="black-opaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+    <preference name="detect-data-types"          value="true" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+    <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
+    <preference name="auto-hide-splash-screen"    value="true" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+    <preference name="disable-cursor"             value="false" />          <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+    <preference name="android-minSdkVersion"      value="10" />             <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+    <preference name="android-targetSdkVersion"   value="18" /> 
+	<preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->  
+	
+	
+	
     <icon src="icon.png" />
     <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:density="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
@@ -47,5 +57,13 @@
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
+	
+	
+	
+	<gap:plugin name="com.adobe.plugins.gaplugin" />
+	<gap:plugin name="nl.x-services.plugins.socialsharing" />
+	<gap:plugin name="org.apache.cordova.device" />
+	<gap:plugin name="org.apache.cordova.device-motion" />
+	<gap:plugin name="org.apache.cordova.inappbrowser" />
     <access origin="http://127.0.0.1*" />
 </widget>
